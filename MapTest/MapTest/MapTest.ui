@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MapTestClass</class>
+ <widget class="QWidget" name="MapTestClass">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1040</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MapTest</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{background-color: qlineargradient(spread:pad, x1:0, y1:0.006, x2:1, y2:1, stop:0 rgba(0, 81, 171, 255), stop:1 rgba(100, 207, 252, 255));}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>1120</x>
+     <y>40</y>
+     <width>331</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>运行时间</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_windows_label">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>60</y>
+     <width>801</width>
+     <height>801</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="read_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>60</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 204, 113);
+	border-radius:8px;
+    border: 1px solid rgb(183 , 183 , 183);
+}
+
+QPushButton:hover
+{
+    color:red;
+    background-color:rgb(228 , 240 , 250);
+    border: 1px solid rgb(15 , 150 , 255);
+}
+
+QPushButton:pressed
+{
+    color:red;
+    background-color:rgb(204 , 228 , 247);
+    border: 1px solid rgb(1 , 84 , 153);
+    padding-left:3px;
+    padding-top:3px;
+}</string>
+   </property>
+   <property name="text">
+    <string>读取txt</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="change_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>150</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 204, 113);
+	border-radius:8px;
+    border: 1px solid rgb(183 , 183 , 183);
+}
+
+QPushButton:hover
+{
+    color:red;
+    background-color:rgb(228 , 240 , 250);
+    border: 1px solid rgb(15 , 150 , 255);
+}
+
+QPushButton:pressed
+{
+    color:red;
+    background-color:rgb(204 , 228 , 247);
+    border: 1px solid rgb(1 , 84 , 153);
+    padding-left:3px;
+    padding-top:3px;
+}</string>
+   </property>
+   <property name="text">
+    <string>转晶元图</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="paintWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sure_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1520</x>
+     <y>400</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 204, 113);
+	border-radius:8px;
+    border: 1px solid rgb(183 , 183 , 183);
+}
+
+QPushButton:hover
+{
+    color:red;
+    background-color:rgb(228 , 240 , 250);
+    border: 1px solid rgb(15 , 150 , 255);
+}
+
+QPushButton:pressed
+{
+    color:red;
+    background-color:rgb(204 , 228 , 247);
+    border: 1px solid rgb(1 , 84 , 153);
+    padding-left:3px;
+    padding-top:3px;
+}</string>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="MyLabel" name="small_label">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>490</y>
+     <width>360</width>
+     <height>360</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="x_pos_label">
+   <property name="geometry">
+    <rect>
+     <x>1160</x>
+     <y>330</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>X位置:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="y_pos_label">
+   <property name="geometry">
+    <rect>
+     <x>1360</x>
+     <y>330</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>Y位置：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="x_position_label_3">
+   <property name="geometry">
+    <rect>
+     <x>1360</x>
+     <y>1310</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>X位置:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="rotate">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>240</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 204, 113);
+	border-radius:8px;
+    border: 1px solid rgb(183 , 183 , 183);
+}
+
+QPushButton:hover
+{
+    color:red;
+    background-color:rgb(228 , 240 , 250);
+    border: 1px solid rgb(15 , 150 , 255);
+}
+
+QPushButton:pressed
+{
+    color:red;
+    background-color:rgb(204 , 228 , 247);
+    border: 1px solid rgb(1 , 84 , 153);
+    padding-left:3px;
+    padding-top:3px;
+}</string>
+   </property>
+   <property name="text">
+    <string>旋转90°</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="x_spinBox">
+   <property name="geometry">
+    <rect>
+     <x>1160</x>
+     <y>410</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="maximum">
+    <number>265</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="y_spinBox">
+   <property name="geometry">
+    <rect>
+     <x>1360</x>
+     <y>410</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="maximum">
+    <number>223</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="red_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>红色</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="blue_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>300</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 85, 255);
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>蓝色</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gray_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(184, 184, 184);
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>灰色</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="red_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>240</y>
+     <width>113</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="blue_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>300</y>
+     <width>113</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 85, 255);
+color: rgb(255, 255, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gray_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>360</y>
+     <width>113</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(184, 184, 184);
+color: rgb(255, 255, 0);</string>
+   </property>
+  </widget>
+  <zorder>main_windows_label</zorder>
+  <zorder>label</zorder>
+  <zorder>read_pushButton</zorder>
+  <zorder>change_pushButton</zorder>
+  <zorder>paintWidget</zorder>
+  <zorder>sure_pushButton</zorder>
+  <zorder>small_label</zorder>
+  <zorder>x_pos_label</zorder>
+  <zorder>y_pos_label</zorder>
+  <zorder>x_position_label_3</zorder>
+  <zorder>rotate</zorder>
+  <zorder>x_spinBox</zorder>
+  <zorder>y_spinBox</zorder>
+  <zorder>red_label</zorder>
+  <zorder>blue_label</zorder>
+  <zorder>gray_label</zorder>
+  <zorder>red_lineEdit</zorder>
+  <zorder>blue_lineEdit</zorder>
+  <zorder>gray_lineEdit</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyLabel</class>
+   <extends>QLabel</extends>
+   <header>mylabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MapTest.qrc"/>
+ </resources>
+ <connections/>
+</ui>
